@@ -18,17 +18,17 @@ Deve retornar um array com 3 pokemóns aleatórios, contendo seus respectivos `n
 
 ### Testes
 
-* [ ] mocks
-* [ ] stubs
+* [x] mocks
+* [x] stubs
 * [ ] spies
 * [ ] testes end-2-end
-* [ ] testes unitários
-* [ ] 100% de code coverage
+* [x] testes unitários
+* [x] 100% de code coverage
 
 ### Extras
 
-* [ ] TDD e BDD, será que rola? Acho que vale a tentativa!
-* [ ] Que tal consumir a API sem usar libs externas? o módulo `https` do node pode ser bem interessante!
+* [x] TDD e BDD, será que rola? Acho que vale a tentativa!
+* [x] Que tal consumir a API sem usar libs externas? o módulo `https` do node pode ser bem interessante!
 * [ ] Publicar o code coverage no github pages!
 
 ## Dicas
@@ -90,21 +90,3 @@ URLs Úteis ao desafio:
   * [ ] Deve ter testes unitários que cubra todas as funções
   * [ ] Deve ter testes end-2-end que cubra todas as rotas
   * [ ] Deve ter relatório de 100% de code coverage
-
-## Iniciando
-
-1. `package.json` - Troque a versão do node para a sua versão atual (`node -v`) e coloque seu nome no `Author`.
-
-2. `npm i` - Escolha as bibliotecas de testes e instale elas (como as aulas do modulo 1 são com o CommonJS e as bibliotecas `chai`, `mocha`, `sinon` e `nyc`, as configuração de coverage já foi feita pensando nelas).
-
-3. ### Bora codar
-
-## Submissão
-
-1. Inicialize um repósitório git com um arquivo README.md contendo seu nome, quais tópicos do checklist foram implementados e, caso queira, um breve resumo de cada tópico.
-
-2. Crie o projeto e os testes.
-
-3. Coloque as instruções de como configurar e executar seu projeto e os testes no README.md (não se esqueça do coverage com o `nyc`).
-
-4. Envie o link no canal `#desafios-jsexpert` da nossa comunidade no discord.
