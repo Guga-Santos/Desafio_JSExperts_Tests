@@ -12,3 +12,5 @@ function handler(request, response) {
 const app = http.createServer(handler);
 
 app.listen(DEFAULT_PORT, () => console.log(`Listening at port: ${DEFAULT_PORT}`));
+
+module.exports = app;

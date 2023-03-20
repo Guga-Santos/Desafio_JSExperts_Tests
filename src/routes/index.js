@@ -11,7 +11,7 @@ const routes = {
     return response.end();
   },
   '/team:get': async (request, response) => {
-    const data = await service.getPokemonTeamRaw()
+    const data = await service.getRandomTeam()
     response.write(JSON.stringify(data));
     return response.end();
   },

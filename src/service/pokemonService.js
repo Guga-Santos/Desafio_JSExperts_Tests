@@ -1,3 +1,4 @@
+const MAGIC_NUMBER = 171;
 class PokemonService {
   constructor({ repository }) {
     this.repository = repository;
@@ -10,17 +11,17 @@ class PokemonService {
 
   async getRandomNumber() {
     const length = await this.getDataLength();
-    const randomNumber = Math.floor(Math.random() * length);
+    const randomNumber = []
+    let count = 1;
+    while(count <= 3) {
+      randomNumber.push(Math.floor(Math.random() * (length - MAGIC_NUMBER)))
+      count += 1;
+    }
     return randomNumber;
   }
 
   async getPokemonTeamRaw() {
-    const randomNums = [
-      await this.getRandomNumber(), 
-      await this.getRandomNumber(),
-      await this.getRandomNumber() 
-    ];
-
+    const randomNums = await this.getRandomNumber();
     const team = [];
     
     const promise = randomNums.map( async (num) => {
@@ -35,7 +36,6 @@ class PokemonService {
 
   async getRandomTeam() {
     const teamRaw = await this.getPokemonTeamRaw();
-
     const filter = [];
 
      teamRaw.forEach((pokemon) => {

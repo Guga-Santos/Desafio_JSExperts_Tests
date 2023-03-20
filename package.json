@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./src/app.js",
-    "test": "npx mocha -w ./tests/**/*.test.js",
-    "test:cov": "npx nyc npx mocha ./tests/**/*.test.js"
+    "test": "npx mocha -w --timeout=5000 ./tests/**/*.test.js",
+    "test:cov": "npx nyc npx mocha --timeout=5000 ./tests/**/*.test.js"
   },
   "engines": {
     "node": "18"
@@ -17,6 +17,7 @@
   "devDependencies": {
     "chai": "^4.3.7",
     "mocha": "^10.2.0",
-    "sinon": "^15.0.2"
+    "sinon": "^15.0.2",
+    "supertest": "^6.3.3"
   }
 }

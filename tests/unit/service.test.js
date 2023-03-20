@@ -42,14 +42,17 @@ describe('Service Suite Tests', () => {
       expect(data).to.be.equal(1000)
   })
 
-  it('Ensure its possible to return a random number', async () => {
+  it('Ensure its possible to return an Array of random number', async () => {
     sandbox.stub(
       repository,
       repository.getRawData.name
       ).returns(mocks.dataLength)
 
       const data = await service.getRandomNumber();
-      expect(data).to.be.lte(mocks.dataLength.count).and.gte(1)
+      for(const number of data) {
+        expect(number).to.be.lte(mocks.dataLength.count).and.gte(1)
+      }
+      expect(data).to.have.length(3);
   })
 
   it('Ensure its possible to random a pokemon team', async () => {
