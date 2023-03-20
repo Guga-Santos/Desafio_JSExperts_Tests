@@ -1,5 +1,9 @@
+const PokemonRepository = require('../repository/pokemonRepository');
+const PokemonService = require('../service/pokemonService');
 const API = require('./../api')
 const api = new API();
+const repository = new PokemonRepository({ api });
+const service = new PokemonService({ repository });
 
 const routes = {
   '/:get': (request, response) => {
@@ -7,9 +11,8 @@ const routes = {
     return response.end();
   },
   '/team:get': async (request, response) => {
-    const rawData = await api.getPokemon(125)
-    response.write('Página onde será montado um time');
-    console.log(rawData);
+    const data = await service.getPokemonTeamRaw()
+    response.write(JSON.stringify(data));
     return response.end();
   },
   default(request, response) {

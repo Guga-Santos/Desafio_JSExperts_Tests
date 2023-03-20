@@ -22,7 +22,7 @@ class API {
   }
 
   async getPokemon(offset) {
-    const URL = `${DEFAULT_URL}/?offset=${offset}&limit=1`
+    const URL = `${DEFAULT_URL}/${offset}`
     const promise = new Promise((resolve, reject) => {
       https.request(URL, (res) => {
         let data = '';
