@@ -13,6 +13,25 @@ class PokemonService {
     const randomNumber = Math.floor(Math.random() * length);
     return randomNumber;
   }
+
+  async getPokemonTeam() {
+    const randomNums = [
+      await this.getRandomNumber(), 
+      await this.getRandomNumber(),
+      await this.getRandomNumber() 
+    ];
+
+    const team = [];
+    
+    const promise = randomNums.map( async (num) => {
+      let pokemon = await this.repository.getPokemon(num);
+      team.push(pokemon)
+    })
+
+    await Promise.all(promise);
+
+    return team;
+  }
 }
 
 module.exports = PokemonService;
