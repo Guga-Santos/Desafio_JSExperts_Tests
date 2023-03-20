@@ -20,8 +20,8 @@ Deve retornar um array com 3 pokemóns aleatórios, contendo seus respectivos `n
 
 * [x] mocks
 * [x] stubs
-* [ ] spies
-* [ ] testes end-2-end
+* [x] spies
+* [x] testes end-2-end
 * [x] testes unitários
 * [x] 100% de code coverage
 
@@ -80,13 +80,13 @@ URLs Úteis ao desafio:
 ### Checklist features
 
 - Web API
-  * [ ] Deve ter uma rota raiz que retorne 404 ou um hello world.
-  * [ ] Deve ter uma rota de `/team`, onde:
-    * [ ] Deve consumir a PokeAPI e selecionar 3 pokemóns aleatórios
-    * [ ] Deve consumir a PokeAPI para obter mais informações sobre os pokemóns escolhidos
-    * [ ] Deve retornar um objeto JSON contendo um array com 3 pokemóns, cada um com seus respectivos `name` do tipo String e `moves` do tipo Array de String
+  * [x] Deve ter uma rota raiz que retorne 404 ou um hello world.
+  * [x] Deve ter uma rota de `/team`, onde:
+    * [x] Deve consumir a PokeAPI e selecionar 3 pokemóns aleatórios
+    * [x] Deve consumir a PokeAPI para obter mais informações sobre os pokemóns escolhidos
+    * [x] Deve retornar um objeto JSON contendo um array com 3 pokemóns, cada um com seus respectivos `name` do tipo String e `moves` do tipo Array de String
 
 - Testes
-  * [ ] Deve ter testes unitários que cubra todas as funções
-  * [ ] Deve ter testes end-2-end que cubra todas as rotas
-  * [ ] Deve ter relatório de 100% de code coverage
+  * [x] Deve ter testes unitários que cubra todas as funções
+  * [x] Deve ter testes end-2-end que cubra todas as rotas
+  * [x] Deve ter relatório de 100% de code coverage

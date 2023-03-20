@@ -29,6 +29,7 @@ describe('E2E', () => {
 
   beforeEach(() => {
     sandbox = sinon.createSandbox();
+    sandbox.spy(api);
   })
 
   afterEach(() => {
