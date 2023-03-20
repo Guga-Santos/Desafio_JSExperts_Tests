@@ -7,6 +7,12 @@ class PokemonService {
     const data = await this.repository.getRawData();
     return data.count;
   }
+
+  async getRandomNumber() {
+    const length = await this.getDataLength();
+    const randomNumber = Math.floor(Math.random() * length);
+    return randomNumber;
+  }
 }
 
 module.exports = PokemonService;
