@@ -4,7 +4,12 @@ class PokemonRepository {
   }
 
   async getRawData() {
-    const data = await  this.api.getRawData();
+    const data = await this.api.getRawData();
+    return data;
+  }
+
+  async getPokemon(offset) {
+    const data = await this.api.getPokemon(offset);
     return data;
   }
 }
