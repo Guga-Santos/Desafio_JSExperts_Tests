@@ -1,0 +1,20 @@
+[
+  {
+    "count": "",
+    "next": "",
+    "previous": "",
+    "results": [ { "name": "jynx", "url": "https://pokeapi.co/api/v2/pokemon/124/" } ]
+  },
+  {
+    "count": "",
+    "next": "",
+    "previous": "",
+    "results": [ { "name": "electabuzz", "url": "https://pokeapi.co/api/v2/pokemon/125/" } ]
+  },
+  {
+    "count": "",
+    "next": "",
+    "previous": "",
+    "results": [ { "name": "magmar", "url": "https://pokeapi.co/api/v2/pokemon/126/" } ]
+  }
+  ]
