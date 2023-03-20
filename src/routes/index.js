@@ -1,10 +1,15 @@
+const API = require('./../api')
+const api = new API();
+
 const routes = {
   '/:get': (request, response) => {
     response.write('Bem-vindo à Página Inicial');
     return response.end();
   },
-  '/team:get': (request, response) => {
+  '/team:get': async (request, response) => {
+    const rawData = await api.getRawData()
     response.write('Página onde será montado um time');
+    console.log(rawData.count);
     return response.end();
   },
   default(request, response) {

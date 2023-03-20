@@ -3,20 +3,27 @@ const https = require('node:https');
 const DEFAULT_URL = 'https://pokeapi.co/api/v2/pokemon';
 class API {
   async getRawData() {
-    https.request(DEFAULT_URL, (res) => {
-      res.on('data', (data) => {
-        process.stdout.write(data);
+    const promise = new Promise((resolve, reject) => {
+      https.request(DEFAULT_URL, (res) => {
+        let data = '';
+        res.on('data', (chunk) => {
+          data += chunk;
+        })
+
+        res.on('end', () => {
+          resolve(JSON.parse(data));
+        })
+    
       })
+      .on('error', (error) => {
+        reject(error);
+      })
+      .end();
     })
 
-    .on('error', (error) => {
-      console.log(error);
-    })
-    
-    .end();
+    return await promise;
   }
 }
 
-const api = new API();
-console.log(api.getRawData())
+module.exports = API
 
