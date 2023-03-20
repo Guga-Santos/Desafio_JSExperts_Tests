@@ -40,4 +40,14 @@ describe('Service Suite Tests', () => {
       expect(data).to.be.equal(1000)
   })
 
+  it('Ensure its possible to return a random number', async () => {
+    sandbox.stub(
+      repository,
+      repository.getRawData.name
+      ).returns(mocks.dataLength)
+
+      const data = await service.getRandomNumber();
+      expect(data).to.be.lte(mocks.dataLength.count).and.gte(1)
+  })
+
 })
