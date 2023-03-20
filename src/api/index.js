@@ -15,9 +15,6 @@ class API {
         })
     
       })
-      .on('error', (error) => {
-        reject(error);
-      })
       .end();
     })
 
@@ -36,9 +33,6 @@ class API {
         res.on('end', () => {
           resolve(JSON.parse(data));
         })
-      })
-      .on('error', (err) => {
-        console.log(err);
       })
       .end();
     })

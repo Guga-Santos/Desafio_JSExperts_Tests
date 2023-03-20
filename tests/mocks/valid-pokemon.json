@@ -1,0 +1,8 @@
+{
+  "count": 1281,
+  "next": "https://pokeapi.co/api/v2/pokemon/?offset=6&limit=1",
+  "previous": "https://pokeapi.co/api/v2/pokemon/?offset=4&limit=1",
+  "results": [
+    { "name": "charizard", "url": "https://pokeapi.co/api/v2/pokemon/6/" }
+  ]
+}
