@@ -36,4 +36,14 @@ describe('Repository Suite Tests', () => {
     const data = await repository.getRawData();
     expect(data).to.be.deep.equal(mocks.validRaw)
   })
+
+  it('Ensure getPokemon returns the right data', async () => {
+    sandbox.stub(
+      api,
+      api.getPokemon.name
+    ).returns(mocks.validPokemon)
+
+    const data = await repository.getPokemon(5);
+    expect(data).to.be.deep.equal(mocks.validPokemon);
+  })
 })
