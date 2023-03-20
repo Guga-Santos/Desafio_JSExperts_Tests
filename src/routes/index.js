@@ -7,10 +7,9 @@ const routes = {
     return response.end();
   },
   '/team:get': async (request, response) => {
-    const rawData = await api.getRawData()
-    const rawDataLength = await api.getDataLength()
+    const rawData = await api.getPokemon(6)
     response.write('Página onde será montado um time');
-    console.log(rawDataLength);
+    console.log(rawData);
     return response.end();
   },
   default(request, response) {

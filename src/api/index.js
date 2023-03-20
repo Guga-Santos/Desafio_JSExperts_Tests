@@ -24,10 +24,26 @@ class API {
     return await promise;
   }
 
-  async getDataLength() {
-    const data = await this.getRawData()
+  async getPokemon(offset) {
+    const URL = `${DEFAULT_URL}/?offset=${offset}&limit=1`
+    const promise = new Promise((resolve, reject) => {
+      https.request(URL, (res) => {
+        let data = '';
+        res.on('data', (chunk) => {
+          data += chunk;
+        })
 
-    return data.count;
+        res.on('end', () => {
+          resolve(JSON.parse(data));
+        })
+      })
+      .on('error', (err) => {
+        console.log(err);
+      })
+      .end();
+    })
+
+    return await promise;
   }
 }
 
