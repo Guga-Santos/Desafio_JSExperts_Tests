@@ -5,6 +5,11 @@ A idéia é testar os fundamentos de `testing`, aplicando o que foi visto no
 
 Consumindo a [PokeAPI](https://pokeapi.co/), faça uma API que retorne 3 pokemóns aleatórios para formar seu time inicial numa jornada pokemon.
 
+-------
+## Coverage com 100% de cobertura: 
+<a>https://guga-santos.github.io/Desafio_JSExperts_Tests/</a>
+-------
+
 ## Requisitos
 
 ### Funcionalidades
