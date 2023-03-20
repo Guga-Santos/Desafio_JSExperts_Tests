@@ -23,6 +23,12 @@ class API {
 
     return await promise;
   }
+
+  async getDataLength() {
+    const data = await this.getRawData()
+
+    return data.count;
+  }
 }
 
 module.exports = API

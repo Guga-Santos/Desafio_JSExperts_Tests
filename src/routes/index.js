@@ -8,8 +8,9 @@ const routes = {
   },
   '/team:get': async (request, response) => {
     const rawData = await api.getRawData()
+    const rawDataLength = await api.getDataLength()
     response.write('Página onde será montado um time');
-    console.log(rawData.count);
+    console.log(rawDataLength);
     return response.end();
   },
   default(request, response) {
