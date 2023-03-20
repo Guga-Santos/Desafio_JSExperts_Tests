@@ -29,7 +29,7 @@ Deve retornar um array com 3 pokemóns aleatórios, contendo seus respectivos `n
 
 * [x] TDD e BDD, será que rola? Acho que vale a tentativa!
 * [x] Que tal consumir a API sem usar libs externas? o módulo `https` do node pode ser bem interessante!
-* [ ] Publicar o code coverage no github pages!
+* [x] Publicar o code coverage no github pages!
 
 ## Dicas
 
