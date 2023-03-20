@@ -7,7 +7,8 @@ const PokemonService = require('../../src/service/pokemonService');
 
 const mocks = {
   dataLength: require('./../mocks/data-count.json'),
-  pokemonTeam: require('./../mocks/valid-pokemon-team.json')
+  pokemonTeam: require('./../mocks/valid-pokemon-team.json'),
+  rawTeam: require('./../mocks/valid-raw-team.json')
 }
 
 
@@ -61,7 +62,19 @@ describe('Service Suite Tests', () => {
     .onCall(2).returns(mocks.pokemonTeam[2])
 
 
-    const data = await service.getPokemonTeam();
+    const data = await service.getPokemonTeamRaw();
+    expect(data).to.be.deep.equal(mocks.pokemonTeam);
+  })
+
+  it('Ensure its possible to random a pokemon team stats', async () => {
+    sandbox.stub(
+      service,
+      service.getPokemonTeamRaw.name
+    ).returns(mocks.rawTeam)
+  
+
+
+    const data = await service.getRandomTeam();
     expect(data).to.be.deep.equal(mocks.pokemonTeam);
   })
 
