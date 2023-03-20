@@ -1,4 +1,4 @@
-# Story: Seu primeiro time pokemon
+# PokeAPI Tests
 
 A idéia é testar os fundamentos de `testing`, aplicando o que foi visto no
 `JS Expert - Módulo 02` num projeto simples e divertido.
