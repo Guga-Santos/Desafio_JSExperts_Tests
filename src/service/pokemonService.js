@@ -14,7 +14,7 @@ class PokemonService {
     return randomNumber;
   }
 
-  async getPokemonTeam() {
+  async getPokemonTeamRaw() {
     const randomNums = [
       await this.getRandomNumber(), 
       await this.getRandomNumber(),
@@ -31,6 +31,26 @@ class PokemonService {
     await Promise.all(promise);
 
     return team;
+  }
+
+  async getRandomTeam() {
+    const teamRaw = await this.getPokemonTeamRaw();
+
+    const filter = [];
+
+     teamRaw.forEach((pokemon) => {
+      let stats = {
+        id: pokemon.id,
+        name: pokemon.name,
+        weight: pokemon.weight,
+        moves: pokemon.moves,
+        sprite: pokemon.sprites['front_default']
+      }
+
+      filter.push(stats);
+    })
+
+    return filter;
   }
 }
 
